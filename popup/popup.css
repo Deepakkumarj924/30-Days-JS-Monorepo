@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c4e70;
+}
+
+.card {
+  text-align: center;
+}
+
+#submit {
+  padding: 12px 45px;
+  border: none;
+  box-shadow: -4px 4px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  background-color: #2ecc71;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+  background-color: #27ae60;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Animation for the overlay's fade-in/out */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* MODIFIED POPUP STYLING  */
+/* The popup itself no longer needs to be 'fixed'. It's now centered by the overlay. */
+.popup {
+  /* This is the VISIBLE state */
+  transform: translateY(0);
+  opacity: 1;
+
+  /* This is the magic: Animate changes to transform and opacity */
+  transition: transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28),
+    opacity 0.4s ease;
+}
+
+/* --- ESSENTIAL CHANGE: MODIFIED HIDDEN STATE --- */
+/* The .hidden class now applies to the overlay, hiding everything inside. */
+.popup-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* The popup inside a hidden overlay starts shifted up */
+.popup-overlay.hidden .popup {
+  transform: translateY(-30px);
+}
+
+.popup-content-wrapper {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 400px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+#ok {
+  width: 100%;
+  padding: 13px 0;
+  color: white;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#ok:hover {
+  background-color: #27ae60;
+}
+
+.img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: -50px;
+  left: 150px;
+}
+
+.fa-circle-check {
+  font-size: 100px;
+  color: #2ecc71;
+}
