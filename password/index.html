@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hide & show password</title>
+    <script
+      src="https://kit.fontawesome.com/08741f0525.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #6a0546;
+    }
+    .input-div {
+      background-color: #ffffff;
+      padding: 11px;
+      border: none;
+      border-radius: 5px;
+      width: 350px;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+    }
+    #icon {
+      color: rgb(122, 121, 121);
+      font-size: 20px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    #password{
+        height: 30px;
+        width: 280px;
+        font-size: 17px;
+        outline: none;
+        border:none;
+        padding-left: 7px;
+    }
+  </style>
+  <body>
+    <div class="input-div">
+    <div class="">
+      <input type="password" name="password" id="password"/>
+      </div>
+      <div id="icon">
+      <!-- <i class="fa-solid fa-eye"></i> -->
+      <i id="eye" class="fa-solid fa-eye-slash"></i>
+      </div>
+    </div>
+    </div>
+    <script>
+        const eyeBtn = document.getElementById("icon");
+        let input = document.getElementById("password");
+        let icon = document.getElementById("eye");
+        eyeBtn.addEventListener("click",()=>{
+            if (input.type==="password") {
+              input.type="text";
+              icon.classList.remove("fa-eye-slash");
+              icon.classList.add("fa-eye");
+            }
+            else{
+                input.type="password"; 
+                icon.classList.remove("fa-eye");
+                icon.classList.add("fa-eye-slash");
+             } 
+        })
+    </script>
+  </body>
+</html>
