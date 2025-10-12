@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Registration Form</title>
+    <script
+      src="https://kit.fontawesome.com/08741f0525.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="img"><img id="icon" src="paper-plane.png" alt="" /></div>
+        <form action="">
+          <table>
+            <tr>
+              <td><label for="fullName">Full Name</label></td>
+              <td class="td">
+                <input
+                  type="text"
+                  name="fullName"
+                  id="fullName"
+                  placeholder="Enter your name"
+                  onkeyup="nameValidation()"
+                />
+                <span id="name-error"></span>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="phoneNo">Phone No.</label></td>
+              <td class="td">
+                <input
+                  type="tel"
+                  name="phoneNo"
+                  id="phoneNo"
+                  placeholder="123 456 7890"
+                  onkeyup="phoneValidation()"
+                />
+                <span id="phone-error"></span>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="email">Email Id</label></td>
+              <td class="td">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter Email"
+                  onkeyup="emailValidation()"
+                />
+                <span id="email-error"></span>
+              </td>
+            </tr>
+            <tr>
+              <td id="td-msg"><label for="message">Your Message</label></td>
+              <td class="td">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Enter your message"
+                  onkeyup="msgValidation()"
+                ></textarea>
+                <span id="msg-error"></span>
+              </td>
+            </tr>
+          </table>
+          <div class="btn">
+            <button type="submit" onclick="submitValidation(event)">
+              Submit
+            </button>
+            <span id="submit-error"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
