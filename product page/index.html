@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Product Page</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-child card-child-1">
+        <img id="img" src="image/1.png" alt="" />
+        <div class="img-buttons">
+          <div class="img-button" id="img-button-1"></div>
+          <div class="img-button" id="img-button-2"></div>
+          <div class="img-button" id="img-button-3"></div>
+        </div>
+      </div>
+      <div class="card-child card-child-2">
+        <p id="heading">Casual T-Shirt</p>
+        <p id="price">$15.00</p>
+        <p id="discount">30% OFF</p>
+        <p id="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic sit
+          ullam blanditiis molestiae.
+        </p>
+        <div class="select-size">
+          <p class="property-text">Size</p>
+          <label for="small">
+            <input type="radio" name="size" id="small" />
+            <span>S</span>
+          </label>
+          <label for="medium">
+            <input type="radio" name="size" id="medium" />
+            <span>M</span>
+          </label>
+          <label for="large">
+            <input type="radio" name="size" id="large" />
+            <span>L</span>
+          </label>
+          <label for="extra-large">
+            <input type="radio" name="size" id="extra-large" />
+            <span>XL</span>
+          </label>
+          <label for="extra-extra-large">
+            <input type="radio" name="size" id="extra-extra-large" />
+            <span>XXL</span>
+          </label>
+        </div>
+        <div class="select-color">
+          <p class="property-text">Color</p>
+          <label for="red">
+            <input type="radio" name="color" id="red" />
+            <span class="color-span" id="c-red"></span>
+          </label>
+          <label for="green">
+            <input type="radio" name="color" id="green" />
+            <span class="color-span" id="c-green"></span>
+          </label>
+          <label for="blue">
+            <input type="radio" name="color" id="blue" />
+            <span class="color-span" id="c-blue"></span>
+          </label>
+          <label for="yellow">
+            <input type="radio" name="color" id="yellow" />
+            <span class="color-span" id="c-yellow"></span>
+          </label>
+        </div>
+        <div class="select-quantity">
+          <p class="property-text">Quantity</p>
+          <input type="number" value="1" min="0" />
+        </div>
+        <button id="buy-button">Buy Now</button>
+      </div>
+    </div>
+    <script>
+      let img = document.getElementById("img");
+      let imgBtn1 = document.getElementById("img-button-1");
+      let imgBtn2 = document.getElementById("img-button-2");
+      let imgBtn3 = document.getElementById("img-button-3");
+
+      imgBtn1.addEventListener("click", () => {
+        img.src = `image/1.png`;
+        imgBtn1.style.background = "blue";
+        imgBtn3.style.background = "white";
+        imgBtn2.style.background = "white";
+      });
+      imgBtn2.addEventListener("click", () => {
+        img.src = `image/2.png`;
+        imgBtn1.style.background = "white";
+        imgBtn3.style.background = "white";
+        imgBtn2.style.background = "blue";
+      });
+      imgBtn3.addEventListener("click", () => {
+        img.src = `image/3.png`;
+        imgBtn1.style.background = "white";
+        imgBtn3.style.background = "blue";
+        imgBtn2.style.background = "white";
+      });
+    </script>
+  </body>
+</html>
