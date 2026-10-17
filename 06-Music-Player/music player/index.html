@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="music.css" />
+    <script
+      src="https://kit.fontawesome.com/08741f0525.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="nav">
+          <div class="nav-icon"><i class="fa-solid fa-angle-left"></i></div>
+          <div class="nav-icon"><i class="fa-solid fa-bars"></i></div>
+        </div>
+        <div id="img-div">
+          <img id="img" src="media/musicImg.jpg" alt="" />
+        </div>
+        <h1>Tera Pyar Mera Junoon</h1>
+        <p>Greenz-Music</p>
+        <audio id="song">
+          <source src="media/tera-pyar-mera-junoon-334753.mp3" />
+        </audio>
+        <input id="input" value="0" type="range" name="" id="" />
+        <div class="bottom-container">
+          <div class="bottom">
+            <div id="backward" class="b-f-btn">
+              <i class="fa-solid fa-backward"></i>
+            </div>
+            <div id="play" onclick="playPause()">
+              <i class="fa-solid fa-play" id="ctrlIcon"></i>
+            </div>
+            <div id="forward" class="b-f-btn">
+              <i class="fa-solid fa-forward"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="music.js"></script>
+  </body>
+</html>
