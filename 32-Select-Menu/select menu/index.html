@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Select Menu</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="menu">
+        <div class="select">
+          <p id="ssm">Select social media</p>
+          <img src="image/down-arrow.png" alt="" />
+        </div>
+        <div class="options">
+          <ul>
+            <li class="option">
+              <img src="image/facebook.png" alt="" />
+              <p>Facebook</p>
+            </li>
+            <li class="option">
+              <img src="image/instagram.png" alt="" />
+              <p>Instagram</p>
+            </li>
+            <li class="option">
+              <img src="image/whatsapp.png" alt="" />
+              <p>What'sApp</p>
+            </li>
+            <li class="option">
+              <img src="image/youtube.png" alt="" />
+              <p>Youtube</p>
+            </li>
+            <li class="option">
+              <img src="image/pinterest.png" alt="" />
+              <p>Pinterest</p>
+            </li>
+            <li class="option">
+              <img src="image/twitter.png" alt="" />
+              <p>Twitter</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let selectField = document.querySelector(".select");
+      let options = document.getElementsByClassName("option");
+      let selectText = document.getElementById("ssm");
+
+      let optMenu = document.querySelector(".options");
+      for (option of options) {
+        option.onclick = function () {
+          selectText.innerHTML = this.textContent;
+          optMenu.style.display = "none";
+        };
+      }
+
+      selectField.addEventListener("click", () => {
+        if (optMenu.style.display === "none") {
+          optMenu.style.display = "block";
+        } else {
+          optMenu.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
