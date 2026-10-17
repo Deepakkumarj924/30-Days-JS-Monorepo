@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Mini Calender</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calender">
+        <div class="date-day">
+          <div>
+            <p id="date">13</p>
+            <p id="day">Tuesday</p>
+          </div>
+        </div>
+        <div class="month-year">
+          <div>
+            <p id="month">January</p>
+            <p id="year">2023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let date = document.getElementById("date");
+      let day = document.getElementById("day");
+      let month = document.getElementById("month");
+      let year = document.getElementById("year");
+      const days = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thrusday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ];
+      const months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+      const today = new Date();
+
+      date.innerHTML = today.getDate();
+      day.innerHTML = days[today.getDay() - 1];
+      month.innerHTML = months[today.getMonth()];
+      year.innerHTML = today.getFullYear();
+    </script>
+  </body>
+</html>
