@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sw.css" />
+    <title>stop watch</title>
+    <script
+      src="https://kit.fontawesome.com/08741f0525.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div id="times">
+          <p>
+            <span id="hour">00</span>:<span id="minute">00</span>:<span
+              id="second"
+              >00</span
+            >
+          </p>
+        </div>
+        <div id="buttons">
+          <div id="stop"><i class="fa-solid fa-circle-stop"></i></div>
+          <div id="play">
+            <i class="fa-solid fa-circle-play"></i>
+          </div>
+          <div id="reset"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+        </div>
+      </div>
+    </div>
+    <script src="sw.js"></script>
+  </body>
+</html>
