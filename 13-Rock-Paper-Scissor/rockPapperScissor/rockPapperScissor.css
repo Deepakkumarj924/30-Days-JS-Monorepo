@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.heading {
+  text-align: center;
+  padding: 30px;
+  background-color: rgb(1, 12, 55);
+  color: white;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+.img {
+  width: 150px;
+  height: 150px;
+  padding: 30px;
+  margin: 20px;
+  margin-top: 40px;
+  border: none;
+  border-radius: 50%;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.fist {
+  background-color: #f623a2;
+}
+.hand {
+  background-color: #288fef;
+}
+.hello {
+  background-color: #2af492;
+}
+.score-container {
+  display: flex;
+  justify-content: center;
+}
+.score-board {
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #f9b74c;
+  border-radius: 20px;
+}
+.score-board p {
+  padding: 5px;
+}
+.msg-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px 0px 0px 10px;
+}
+.msg {
+  background-color: #1d042a;
+  color: white;
+  padding: 20px 150px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+.img:hover {
+  border: 5px solid rgb(8, 27, 7);
+}
