@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Image Background Change Effect</title>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="transparent">
+        <img src="image/car-transparent.png" alt="" />
+        <div class="normal"><img id="orgImg" src="image/car.jpg" alt="" /></div>
+        <span id="line">
+          <img id="arrow" src="image/arrow.png" alt="" />
+        </span>
+      </div>
+    </div>
+
+    <script>
+      let transparent = document.querySelector(".transparent");
+      let normal = document.querySelector(".normal");
+      let orgImg = document.getElementById("orgImg");
+      let line = document.getElementById("line");
+      orgImg.style.width = transparent.offsetWidth + "px";
+      let leftSpace = transparent.offsetLeft;
+
+      transparent.onmousemove = function (e) {
+        let boxWidth = e.pageX - leftSpace + "px";
+        normal.style.width = boxWidth;
+        line.style.left = boxWidth;
+      };
+    </script>
+  </body>
+</html>
