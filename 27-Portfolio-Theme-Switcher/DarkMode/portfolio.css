@@ -1,0 +1,177 @@
+/* 1. Define colors for Light Mode (default) */
+:root {
+  --background-color: #f8f9fa;
+  --card-color: #ffffff;
+  --text-primary: #343a40;
+  --text-headings: #0a192f;
+  --accent-color: #007bff;
+  --hover-color: #3b97f9;
+}
+
+/* 2. Define overrides for Dark Mode */
+.dark-mode {
+  --background-color: #0a192f;
+  --card-color: #112240;
+  --text-primary: #8892b0;
+  --text-headings: #ccd6f6;
+  --accent-color: #4dd3ff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-primary);
+  font-family: sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Example for a card element */
+.project-card {
+  background-color: var(--card-color);
+  border: 1px solid var(--accent-color);
+}
+header {
+  position: sticky;
+  margin-bottom: 20px;
+}
+#logo-div {
+  height: 40px;
+  padding: 5px 0;
+}
+#logo {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: auto;
+  padding: 5px 0;
+}
+#list-container {
+  display: flex;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+}
+ul li {
+  margin-right: 20px;
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+ul li:hover {
+  color: var(--accent-color);
+}
+a {
+  text-decoration: none;
+}
+#mode-icon-div {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  cursor: pointer;
+  margin-left: 25px;
+}
+#mode-icon {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#full-name {
+  color: var(--text-headings);
+  font-size: 60px;
+  margin: 10px 0;
+}
+#first-name {
+  color: var(--accent-color);
+}
+#intro {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+  height: 600px;
+  padding: 10px;
+}
+.hero-1 {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.hero-2 {
+  width: 45%;
+  height: 100%;
+  position: relative;
+}
+#front-img-div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+#front-img {
+  width: 100%;
+
+  object-fit: cover;
+  cursor: pointer;
+}
+#background-img-div {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#background-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 0;
+  margin-left: 0;
+  transition: transform 0.4s ease-in-out;
+}
+
+.hero-2:hover #background-img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+#front-img {
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+.hero-2:hover #front-img {
+  transform: translateX(20px);
+}
+#cv-button {
+  padding: 13px 30px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: var(--accent-color);
+  color: var(--card-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#cv-button:hover {
+  background-color: var(--hover-color);
+}
