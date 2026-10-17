@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #2e2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  padding: 30px;
+  background-image: linear-gradient(
+    rgb(16, 212, 202),
+    rgb(19, 159, 198),
+    rgb(84, 12, 139)
+  );
+  border: none;
+  border-radius: 10px;
+}
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+form input {
+  border: none;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 17px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+button {
+  border: none;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 12px;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+}
+#search {
+  height: 100%;
+}
+.image-div {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.w-img-outter {
+  height: 150px;
+  width: 150px;
+  overflow: hidden;
+}
+#w-img {
+  height: 100%;
+  object-fit: cover;
+}
+.temp-city-div {
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+}
+#temp {
+  font-size: 50px;
+  font-weight: 600;
+}
+#city {
+  font-size: 30px;
+  font-weight: 550;
+}
+.wind-humid-div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.humid-div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+.wind-div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+.h-img {
+  height: 30px;
+  width: 30px;
+}
+#h-img {
+  height: 100%;
+  object-fit: contain;
+}
+.w-img {
+  height: 30px;
+  width: 30px;
+}
+#w-img {
+  height: 100%;
+  object-fit: contain;
+}
+.hidden {
+  display: none;
+}
+#error {
+  padding: 10px;
+  color: rgb(150, 3, 3);
+  font-size: 15px;
+  display: none;
+}

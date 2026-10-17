@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="weather.css" />
+    <title>weather app</title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="search-div">
+        <form action="">
+          <input
+            type="text"
+            spellcheck="false"
+            placeholder="enter city here."
+            name="input"
+            id=""
+          />
+          <button><img id="search" src="images/search.png" alt="" /></button>
+        </form>
+      </div>
+      <p id="error">Invalid City Name.</p>
+      <div class="hidden">
+        <div class="image-div">
+          <div class="w-img-outter">
+            <img id="w-img" src="images/rain.png" alt="" />
+          </div>
+        </div>
+
+        <div class="temp-city-div">
+          <p id="temp">22<sup>0</sup>c</p>
+          <p id="city">Germany</p>
+        </div>
+        <div class="wind-humid-div">
+          <div class="humid-div">
+            <div class="h-img">
+              <img id="h-img" src="images/humidity.png" alt="" />
+            </div>
+            <div>
+              <div><p id="h-percentage">53%</p></div>
+              <div><p>Humidity</p></div>
+            </div>
+          </div>
+          <div class="wind-div">
+            <div class="w-img">
+              <img id="w-img" src="images/wind.png" alt="" />
+            </div>
+            <div>
+              <div><p id="w-speed">5.66 km/h</p></div>
+              <div><p>Wind Speed</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="weather.js"></script>
+  </body>
+</html>
