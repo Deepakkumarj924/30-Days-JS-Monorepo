@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #0a1269;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: #ffffff;
+  padding: 40px;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+}
+.heading {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#h-text {
+  font-size: 22px;
+  font-weight: 900;
+}
+#h-img {
+  height: 25px;
+}
+.form {
+  margin-bottom: 30px;
+}
+#f-input {
+  height: 55px;
+  padding: 10px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  background-image: linear-gradient(
+    to right,
+    rgb(208, 207, 207),
+    rgb(232, 230, 230),
+    rgb(227, 227, 227)
+  );
+  width: 400px;
+  z-index: 4;
+}
+#f-button {
+  height: 55px;
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  font-size: 17px;
+  color: white;
+  font-weight: 600;
+  width: 120px;
+  background-image: linear-gradient(
+    to right,
+    rgb(239, 127, 67),
+    rgb(255, 77, 0)
+  );
+  position: absolute;
+  top: 96px;
+  right: 40px;
+  cursor: pointer;
+  z-index: 5;
+}
+#f-input:focus {
+  outline: none;
+}
+.i-list ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 1px solid #888787;
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+
+  /* --- NEW --- */
+  /* This is crucial for positioning the checkmark inside */
+  position: relative;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.checkbox:checked {
+  background-color: #f05e0f;
+  border-color: #f05e0f;
+}
+
+/* --- NEW: The Checkmark Itself --- */
+/* Create the pseudo-element 'after' when the checkbox is checked */
+.checkbox:checked::after {
+  /* This is required for pseudo-elements to show up */
+  content: "";
+
+  /* Position the checkmark inside the checkbox */
+  position: absolute;
+
+  /* Style the checkmark shape using borders */
+  display: block;
+  width: 4px;
+  height: 8px;
+  border: solid white; /* The color of the checkmark */
+  border-width: 0 3px 3px 0; /* Creates the 'L' shape */
+
+  /* Rotate the 'L' shape to look like a checkmark */
+  transform: rotate(45deg);
+
+  /* Fine-tune the position to center it */
+  top: 4px;
+  left: 7px;
+}
+label {
+  font-size: 18px;
+}
+.l-button {
+  height: 23px;
+  width: 23px;
+  border: none;
+  cursor: pointer;
+  font-size: 23px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  color: #6a6868;
+  font-weight: 500;
+}
+#l-button:hover {
+  background-color: #e1e0e0;
+}
+.l-checkbox {
+  display: flex;
+  align-items: center;
+}
+.completed {
+  color: gray;
+  text-decoration: line-through;
+}
